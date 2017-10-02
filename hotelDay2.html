@@ -1,0 +1,110 @@
+<html>
+  <head>
+    <style>
+      #title {
+       font-size: 100px;
+       color: yellow;
+      }
+      #room1 {
+        background-color: red;
+        width: 360px;
+        height: 360px;
+        float: left;
+        border-radius: 50px;
+        margin: 10px;
+        font-size: 50px;
+        color: white;
+        text-align: center;
+      }
+      #room2 {
+        background-color: blue;
+        width: 360px;
+        height: 360px;
+        float: left;
+        border-radius: 50px;
+        margin: 10px;
+        font-size: 50px;
+        color: white;
+        text-align: center;
+      }
+      #room3 {
+        background-color: purple;
+        width: 360px;
+        height: 360px;
+        float: left;
+        border-radius: 50px;
+        margin: 10px;
+        font-size: 50px;
+        color: white;
+        text-align: center;
+      }
+      #room4 {
+        background-color: yellow;
+        width: 360px;
+        height: 360px;
+        float: left;
+        border-radius: 50px;
+        margin: 10px;
+        font-size: 50px;
+        color: white;
+        text-align: center;
+      }
+      #smallerText {
+        font-size: 20px;
+        color: white;
+      }
+      #blank{
+        
+      }
+    </style>
+  </head>
+    <body background="https://s3-us-west-1.amazonaws.com/gaytravel-pages/Photo_2-Banyan_Courtyard_at_Sunset.jpg">
+      <script>
+        function addAnother() {
+        var newListItem = document.createElement('li');
+        var x = document.getElementById('a').value;
+        var newText = document.createTextNode(x);
+        newListItem.appendChild(newText);
+        var position = document.getElementsByTagName('ul')[0];
+        position.appendChild(newListItem);
+        }
+      </script>
+      <div id="title">Hotel Del Mar</div>
+      <div id="room1">Room 1
+        <input type="text" id="a">
+        <button onclick="addAnother()">Add Guest</button>
+        <input type="text" id="b">
+        <button onclick="removeOne()">Remove Guest</button>
+        <ul id="smallerText">
+          
+        </ul>
+      </div>
+      <div id="room2">Room 2
+        <input type="text" id="a">
+        <button onclick="addAnother()">Add Guest</button>
+        <input type="text" id="b">
+        <button onclick="removeOne()">Remove Guest</button>
+        <ul id="smallerText">
+          
+        </ul>
+      </div>
+      <div id="room3">Room 3
+        <input type="text" id="a">
+        <button onclick="addAnother()">Add Guest</button>
+        <input type="text" id="b">
+        <button onclick="removeOne()">Remove Guest</button>
+        <ul id="smallerText">
+          
+        </ul>
+      </div>
+      <div id="room4">Room 4
+        <input type="text" id="a">
+        <button onclick="addAnother()">Add Guest</button>
+        <input type="text" id="b">
+        <button onclick="removeOne()">Remove Guest</button>
+        <ul id="smallerText">
+          
+        </ul>
+      </div>
+    </body>
+</html>
