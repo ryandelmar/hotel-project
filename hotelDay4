@@ -1,0 +1,166 @@
+<html>
+  <head>
+    <style>
+      #title {
+       font-size: 100px;
+       color: yellow;
+      }
+      #room1 {
+        background-color: red;
+        width: 320px;
+        height: 320px;
+        float: left;
+        border-radius: 50px;
+        margin: 10px;
+        font-size: 50px;
+        color: white;
+        text-align: center;
+      }
+      #room2 {
+        background-color: blue;
+        width: 320px;
+        height: 320px;
+        float: left;
+        border-radius: 50px;
+        margin: 10px;
+        font-size: 50px;
+        color: white;
+        text-align: center;
+      }
+      #room3 {
+        background-color: purple;
+        width: 320px;
+        height: 320px;
+        float: left;
+        border-radius: 50px;
+        margin: 10px;
+        font-size: 50px;
+        color: white;
+        text-align: center;
+      }
+      #room4 {
+        background-color: green;
+        width: 320px;
+        height: 320px;
+        float: left;
+        border-radius: 50px;
+        margin: 10px;
+        font-size: 50px;
+        color: white;
+        text-align: center;
+      }
+      #smallerText {
+        font-size: 20px;
+        color: white;
+      }
+      #blank {
+        
+      }
+    </style>
+  </head>
+    <body background="https://s3-us-west-1.amazonaws.com/gaytravel-pages/Photo_2-Banyan_Courtyard_at_Sunset.jpg">
+      <script>
+        function addGuestOne() {
+          var newListItemOne = document.createElement('li');
+          var w = document.getElementById('a').value;
+          var newTextOne = document.createTextNode(w);
+          newListItemOne.appendChild(newTextOne);
+          var positionOne = document.getElementsByTagName('ol')[0];
+          positionOne.appendChild(newListItemOne);
+        }
+        function removeGuestOne () {
+          var l = document.getElementById('b').value;
+          var list=document.getElementsByTagName('ol')[0].getElementsByTagName('li')[l-1]
+          var ul=list.parentNode;
+          ul.removeChild(list);
+        }
+        function addGuestTwo() {
+          var newListItemTwo = document.createElement('li');
+          var x = document.getElementById('c').value;
+          var newTextTwo = document.createTextNode(x);
+          newListItemTwo.appendChild(newTextTwo);
+          var positionTwo = document.getElementsByTagName('ol')[1];
+          positionTwo.appendChild(newListItemTwo);
+        }
+        function removeGuestTwo () {
+          var l = document.getElementById('d').value;
+          var list=document.getElementsByTagName('ol')[1].getElementsByTagName('li')[l-1]
+          var ul=list.parentNode;
+          ul.removeChild(list);
+        }
+        function addGuestThree() {
+          var newListItemThree = document.createElement('li');
+          var y = document.getElementById('e').value;
+          var newTextThree = document.createTextNode(y);
+          newListItemThree.appendChild(newTextThree);
+          var positionThree = document.getElementsByTagName('ol')[2];
+          positionThree.appendChild(newListItemThree);
+        }
+        function removeGuestThree () {
+          var l = document.getElementById('f').value;
+          var list=document.getElementsByTagName('ol')[2].getElementsByTagName('li')[l-1]
+          var ul=list.parentNode;
+          ul.removeChild(list);
+        }
+        function addGuestFour() {
+          var newListItemFour = document.createElement('li');
+          var z = document.getElementById('g').value;
+          var newTextFour = document.createTextNode(z);
+          newListItemFour.appendChild(newTextFour);
+          var positionFour = document.getElementsByTagName('ol')[3];
+          positionFour.appendChild(newListItemFour);
+        }
+        function removeGuestFour () {
+          var l = document.getElementById('h').value;
+          var list=document.getElementsByTagName('ol')[3].getElementsByTagName('li')[l-1]
+          var ul=list.parentNode;
+          ul.removeChild(list);
+        }
+      </script>
+      <div id="title">Hotel Del Mar</div>
+      <div id="room1">Room 1
+        <input type="text" id="a">
+        <button onclick="addGuestOne()">Add Guest</button>
+        <br>
+        <input type="number" id="b">
+        <button onclick="removeGuestOne()">Remove Guest</button>
+        <br>
+        <ol id="smallerText" class="room1">
+          
+        </ol>
+      </div>
+      <div id="room2">Room 2
+        <input type="text" id="c">
+        <button onclick="addGuestTwo()">Add Guest</button>
+        <br>
+        <input type="number" id="d">
+        <button onclick="removeGuestTwo()">Remove Guest</button>
+        <br>
+        <ol id="smallerText">
+          
+        </ol>
+      </div>
+      <div id="room3">Room 3
+        <input type="text" id="e">
+        <button onclick="addGuestThree()">Add Guest</button>
+        <br>
+        <input type="number" id="f">
+        <button onclick="removeGuestThree()">Remove Guest</button>
+        <br>
+        <ol id="smallerText">
+          
+        </ol>
+      </div>
+      <div id="room4">Room 4
+        <input type="text" id="g">
+        <button onclick="addGuestFour()">Add Guest</button>
+        <br>
+        <input type="number" id="h">
+        <button onclick="removeGuestFour()">Remove Guest</button>
+        <br>
+        <ol id="smallerText">
+          
+        </ol>
+      </div>
+    </body>
+</html>
