@@ -1,0 +1,231 @@
+<html>
+  <head>
+    <style>
+      body {
+       background: url("https://www.travelonline.com/news/fiji-property-spotlight-outrigger-on-the-lagoon-fiji/pool-21584-ws.jpg");
+       background-size: cover;
+      }
+      #title {
+       font-size: 100px;
+       color: yellow;
+      }
+      #room1 {
+        background-color: #64a9e5;
+        opacity: 0.9;
+        width: 290px;
+        height: 290px;
+        float: left;
+        border-radius: 50px;
+        margin: 10px;
+        font-size: 50px;
+        color: white;
+        text-align: center;
+        line-height: 80%;
+        padding: 10px;
+      }
+      #room2 {
+        background-color: #64a9e5;
+        opacity: 0.9;
+        width: 290px;
+        height: 290px;
+        float: left;
+        border-radius: 50px;
+        margin: 10px;
+        font-size: 50px;
+        color: white;
+        text-align: center;
+        line-height: 80%;
+        padding: 10px;
+      }
+      #room3 {
+        background-color: #64a9e5;
+        opacity: 0.9;
+        width: 290px;
+        height: 290px;
+        float: left;
+        border-radius: 50px;
+        margin: 10px;
+        font-size: 50px;
+        color: white;
+        text-align: center;
+        line-height: 80%;
+        padding: 10px;
+      }
+      #room4 {
+        background-color: #64a9e5;
+        opacity: 0.9;
+        width: 290px;
+        height: 290px;
+        float: left;
+        border-radius: 50px;
+        margin: 10px;
+        font-size: 50px;
+        color: white;
+        text-align: center;
+        line-height: 80%;
+        padding: 10px;
+      }
+      input {
+        border: 0px;
+        background-color: #e2e2e2;
+      }
+      button {
+        font-family: "Comic Sans";
+        border: 0px;
+        color: #152584;
+        background-color: #e2e2e2;
+      }
+      #smallerText {
+        font-size: 20px;
+        color: white;
+        line-height: 100%;
+      }
+    </style>
+  </head>
+    <body>
+      <script>
+        var d = new Date();
+        var day= getDay();
+        var month= getMonth() + 1;
+        var year
+        function addGuestOne() {
+          var roomLength1 = document.getElementsByClassName('room1')[0].getElementsByTagName('li');
+          if (roomLength1.length < 3) {
+            var newListItemOne = document.createElement('li');
+            var w = document.getElementById('a').value;
+            var newTextOne = document.createTextNode(w);
+            newListItemOne.appendChild(newTextOne);
+            var positionOne = document.getElementsByTagName('ol')[0];
+            positionOne.appendChild(newListItemOne);
+          }
+          else {
+              room1.style.backgroundColor="red";
+              window.alert("you cannot add any more guests");
+          }
+        }
+        function removeGuestOne () {
+          var l = document.getElementById('b').value;
+          var list=document.getElementsByTagName('ol')[0].getElementsByTagName('li')[l-1]
+          var ul=list.parentNode;
+          ul.removeChild(list);
+          room1.style.backgroundColor="#64a9e5";
+        }
+        function addGuestTwo() {
+          var roomLength2 = document.getElementsByClassName('room2')[0].getElementsByTagName('li');
+          if (roomLength2.length < 3) {
+          var newListItemTwo = document.createElement('li');
+          var x = document.getElementById('c').value;
+          var newTextTwo = document.createTextNode(x);
+          newListItemTwo.appendChild(newTextTwo);
+          var positionTwo = document.getElementsByTagName('ol')[1];
+          positionTwo.appendChild(newListItemTwo);
+          }
+          else {
+            room2.style.backgroundColor="red";
+            window.alert("you cannot add any more guests");
+          }
+        }
+        function removeGuestTwo () {
+          var l = document.getElementById('d').value;
+          var list=document.getElementsByTagName('ol')[1].getElementsByTagName('li')[l-1]
+          var ul=list.parentNode;
+          ul.removeChild(list);
+          room2.style.backgroundColor="#64a9e5";
+        }
+        function addGuestThree() {
+          var roomLength3 = document.getElementsByClassName('room3')[0].getElementsByTagName('li');
+          if (roomLength3.length < 3) {
+          var newListItemThree = document.createElement('li');
+          var y = document.getElementById('e').value;
+          var newTextThree = document.createTextNode(y);
+          newListItemThree.appendChild(newTextThree);
+          var positionThree = document.getElementsByTagName('ol')[2];
+          positionThree.appendChild(newListItemThree);
+          }
+          else {
+            room3.style.backgroundColor="red";
+            window.alert("you cannot add any more guests");
+          }
+        }
+        function removeGuestThree () {
+          var l = document.getElementById('f').value;
+          var list=document.getElementsByTagName('ol')[2].getElementsByTagName('li')[l-1]
+          var ul=list.parentNode;
+          ul.removeChild(list);
+          room3.style.backgroundColor="#64a9e5";
+        }
+        function addGuestFour() {
+          var roomLength4 = document.getElementsByClassName('room4')[0].getElementsByTagName('li');
+          if (roomLength4.length < 3) {
+          var newListItemFour = document.createElement('li');
+          var z = document.getElementById('g').value;
+          var newTextFour = document.createTextNode(z);
+          newListItemFour.appendChild(newTextFour);
+          var positionFour = document.getElementsByTagName('ol')[3];
+          positionFour.appendChild(newListItemFour);
+          }
+          else {
+            room4.style.backgroundColor="red";
+            window.alert("you cannot add any more guests");
+          }
+        }
+        function removeGuestFour () {
+          var l = document.getElementById('h').value;
+          var list=document.getElementsByTagName('ol')[3].getElementsByTagName('li')[l-1]
+          var ul=list.parentNode;
+          ul.removeChild(list);
+          room4.style.backgroundColor="#64a9e5";
+        }
+      </script>
+      <div id="background"></div>
+      <div id="title">Hotel Del Mar</div>
+      <div id="room1">Room 1
+        <br>
+        <br>
+        <input type="text" id="a">
+        <button onclick="addGuestOne()">Check In</button>
+        <br>
+        <input type="number" id="b">
+        <button onclick="removeGuestOne()">Check Out</button>
+        <ol id="smallerText" class="room1">
+          <button onclick="removeGuestOne()">Check Out</button>
+        </ol>
+      </div>
+      <div id="room2">Room 2
+        <br>
+        <br>
+        <input type="text" id="c">
+        <button onclick="addGuestTwo()">Check In</button>
+        <br>
+        <input type="number" id="d">
+        <button onclick="removeGuestTwo()">Chect Out</button>
+        <ol id="smallerText" class="room2">
+          
+        </ol>
+      </div>
+      <div id="room3">Room 3
+        <br>
+        <br>
+        <input type="text" id="e">
+        <button onclick="addGuestThree()">Check In</button>
+        <br>
+        <input type="number" id="f">
+        <button onclick="removeGuestThree()">Check Out</button>
+        <ol id="smallerText" class="room3">
+          
+        </ol>
+      </div>
+      <div id="room4">Room 4
+        <br>
+        <br>
+        <input type="text" id="g">
+        <button onclick="addGuestFour()">Check In</button>
+        <br>
+        <input type="number" id="h">
+        <button onclick="removeGuestFour()">Check Out</button>
+        <ol id="smallerText" class="room4">
+          
+        </ol>
+      </div>
+    </body>
+</html>
