@@ -1,0 +1,66 @@
+<html>
+  <head>
+    <style>
+      .dropbtn {
+        background-color: #e2e2e2;
+        color: #152584;
+        padding: 5px;
+        font-size: 16px;
+        cursor: pointer;
+      }
+      .dropbtn:hover, .dropbtn:focus {
+        background-color: gray;
+      }
+      .dropdown {
+        float: right;
+        position: relative;
+        display: inline-block;
+      }
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: blue;
+        min-width: 160px;
+        overflow: auto;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        right: 0;
+        z-index: 1;
+      }
+      .dropdown-content a {
+        color: white;
+        text-decoration: none;
+        font-size: 16px;
+        display: block;
+      }
+      .dropdown a:hover {background-color: #f1f1f1}
+        .show {display:block;}
+    </style>
+  </head>
+  <body>
+    <script>
+      function myFunction() {
+          document.getElementById("myDropdown").classList.toggle("show");
+        }
+        window.onclick = function(event) {
+          if (!event.target.matches('.dropbtn')) {
+            var dropdowns = document.getElementsByClassName("dropdown-content");
+            var i;
+            for (i = 0; i < dropdowns.length; i++) {
+                var openDropdown = dropdowns[i];
+                if (openDropdown.classList.contains('show')) {
+                openDropdown.classList.remove('show');
+              }
+            }
+          }
+        }
+    </script>
+    <div class="dropdown">
+        <button onclick="myFunction()" class="dropbtn">Dropdown</button>
+          <div id="myDropdown" class="dropdown-content">
+            <a>Guest1</a>
+            <a>Guest2</a>
+            <a>Guest3</a>
+          </div>
+      </div>
+  </body>
+</html>
