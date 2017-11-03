@@ -1,0 +1,229 @@
+<html>
+  <head>
+    <style>
+      body {
+       background: url("https://www.travelonline.com/news/fiji-property-spotlight-outrigger-on-the-lagoon-fiji/pool-21584-ws.jpg");
+       background-size: cover;
+      }
+      #title {
+       font-size: 100px;
+       color: #fff723;
+      }
+      #room1 {
+        background-color: rgba(102, 170, 229, 0.6);
+        width: 290px;
+        height: 350px;
+        float: left;
+        border-radius: 50px;
+        margin: 20px;
+        font-size: 50px;
+        color: white;
+        text-align: center;
+        line-height: 80%;
+        padding: 10px;
+      }
+      #room2 {
+        background-color: rgba(102, 170, 229, 0.6);
+        width: 290px;
+        height: 350px;
+        float: left;
+        border-radius: 50px;
+        margin: 20px;
+        font-size: 50px;
+        color: white;
+        text-align: center;
+        line-height: 80%;
+        padding: 10px;
+      }
+      #room3 {
+        background-color: rgba(102, 170, 229, 0.6);
+        width: 290px;
+        height: 350px;
+        float: left;
+        border-radius: 50px;
+        margin: 20px;
+        font-size: 50px;
+        color: white;
+        text-align: center;
+        line-height: 80%;
+        padding: 10px;
+      }
+      #room4 {
+        background-color: rgba(102, 170, 229, 0.6);
+        width: 290px;
+        height: 350px;
+        float: left;
+        border-radius: 50px;
+        margin: 20px;
+        font-size: 50px;
+        color: white;
+        text-align: center;
+        line-height: 80%;
+        padding: 10px;
+      }
+      input {
+        border: 0px;
+        background-color: #e2e2e2;
+      }
+      button {
+        height: 23px;
+        font-family: "Comic Sans";
+        border: 0px;
+        color: black;
+        background-color: #afceff;
+      }
+      #smallerText {
+        font-size: 20px;
+        color: white;
+        line-height: 100%;
+      }
+      #inputBoxes {
+        height: 23px;
+        background-color: #afceff;
+      }
+    </style>
+  </head>
+    <body>
+      <script>
+        var d = new Date();
+        var day = d.getDate();
+        var month = d.getMonth() + 1;
+        var year = d.getFullYear();
+        var minutes = d.getMinutes();
+        var hours = d.getHours();
+        function addGuestOne() {
+          var roomLength1 = document.getElementsByClassName('room1')[0].getElementsByTagName('li');
+          if (roomLength1.length < 3) {
+            var newListItemOne = document.createElement('li');
+            var w = document.getElementById('inputBoxes').value;
+            var newTextOne = document.createTextNode(w + ", checked in " + hours + ":" + minutes + " | " + month +"/"+ day +"/" + year + "|");
+            newListItemOne.appendChild(newTextOne);
+            var button1 = document.createElement('button');
+            var filling1 = document.createTextNode('Check out');
+            button1.appendChild(filling1);
+            newListItemOne.appendChild(button1);
+            button1.onclick = function () {
+            this.parentNode.parentNode.removeChild(this.parentNode);
+            room1.style.backgroundColor="rgba(102, 170, 229, 0.6)";
+            };
+            var positionOne = document.getElementsByTagName('ol')[0];
+            positionOne.appendChild(newListItemOne);
+          }
+          else {
+              room1.style.backgroundColor="rgba(216, 34, 34, 0.8)";
+              window.alert("you cannot add any more guests");
+          }
+        }
+        function addGuestTwo() {
+          var roomLength2 = document.getElementsByClassName('room2')[0].getElementsByTagName('li');
+          if (roomLength2.length < 3) {
+          var newListItemTwo = document.createElement('li');
+          var x = document.getElementById('inputBoxes').value;
+          var newTextTwo = document.createTextNode(x + ", checked in " + hours + ":" + minutes + "|" + month + "/" + day + "/" + year + "|");
+          newListItemTwo.appendChild(newTextTwo);
+          var button2 = document.createElement('button');
+            var filling2 = document.createTextNode('Check out');
+            button2.appendChild(filling2);
+            newListItemTwo.appendChild(button2);
+            button2.onclick = function () {
+            this.parentNode.parentNode.removeChild(this.parentNode);
+            room2.style.backgroundColor="rgba(102, 170, 229, 0.6)";
+            };
+          var positionTwo = document.getElementsByTagName('ol')[1];
+          positionTwo.appendChild(newListItemTwo);
+          }
+          else {
+            room2.style.backgroundColor="rgba(216, 34, 34, 0.8)";
+            window.alert("you cannot add any more guests");
+          }
+        }
+        function addGuestThree() {
+          var roomLength3 = document.getElementsByClassName('room3')[0].getElementsByTagName('li');
+          if (roomLength3.length < 3) {
+          var newListItemThree = document.createElement('li');
+          var y = document.getElementById('inputBoxes').value;
+          var newTextThree = document.createTextNode(y + ", checked in " + hours + ":" + minutes + "|" + month +"/"+ day +"/" + year +  "|");
+          newListItemThree.appendChild(newTextThree);
+          var button3 = document.createElement('button');
+            var filling3 = document.createTextNode('Check out');
+            button3.appendChild(filling3);
+            newListItemThree.appendChild(button3);
+            button3.onclick = function () {
+            this.parentNode.parentNode.removeChild(this.parentNode);
+            room3.style.backgroundColor="rgba(102, 170, 229, 0.6)";
+            };
+          var positionThree = document.getElementsByTagName('ol')[2];
+          positionThree.appendChild(newListItemThree);
+          }
+          else {
+            room3.style.backgroundColor="rgba(216, 34, 34, 0.8)";
+            window.alert("you cannot add any more guests");
+          }
+        }
+        function addGuestFour() {
+          var roomLength4 = document.getElementsByClassName('room4')[0].getElementsByTagName('li');
+          if (roomLength4.length < 3) {
+          var newListItemFour = document.createElement('li');
+          var z = document.getElementById('inputBoxes').value;
+          var newTextFour = document.createTextNode(z + " , checked in " + hours + ":" + minutes + "|" + month +"/"+ day +"/" + year + "|");
+          newListItemFour.appendChild(newTextFour);
+          var button4 = document.createElement('button');
+            var filling4 = document.createTextNode('Check out');
+            button4.appendChild(filling4);
+            newListItemFour.appendChild(button4);
+            button4.onclick = function () {
+            this.parentNode.parentNode.removeChild(this.parentNode);
+            room4.style.backgroundColor="rgba(102, 170, 229, 0.6)";
+            };
+          var positionFour = document.getElementsByTagName('ol')[3];
+          positionFour.appendChild(newListItemFour);
+          }
+          else {
+            room4.style.backgroundColor="rgba(216, 34, 34, 0.8)";
+            window.alert("you cannot add any more guests");
+          }
+        }
+      </script>
+      <div id="title">Hotel Del Mar</div>
+      <div id="room1">Room 1
+        <br>
+        <br>
+        <input type="text" id="inputBoxes">
+        <button onclick="addGuestOne()">Check In</button>
+        <br>
+        <ol id="smallerText" class="room1">
+        
+        </ol>
+      </div>
+      <div id="room2">Room 2
+        <br>
+        <br>
+        <input type="text" id="inputBoxes">
+        <button onclick="addGuestTwo()">Check In</button>
+        <br>
+        <ol id="smallerText" class="room2">
+          
+        </ol>
+      </div>
+      <div id="room3">Room 3
+        <br>
+        <br>
+        <input type="text" id="inputBoxes">
+        <button onclick="addGuestThree()">Check In</button>
+        <br>
+        <ol id="smallerText" class="room3">
+          
+        </ol>
+      </div>
+      <div id="room4">Room 4
+        <br>
+        <br>
+        <input type="text" id="inputBoxes">
+        <button onclick="addGuestFour()">Check In</button>
+        <br>
+        <ol id="smallerText" class="room4">
+          
+        </ol>
+      </div>
+    </body>
+</html>
